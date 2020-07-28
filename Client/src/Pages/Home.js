@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import {Link} from "react-router-dom";
+import "./CSS/Home.css"
+
+import RedirectButton from "Components/RedirectButton"
 
 class Home extends Component {
 	constructor(props) {
@@ -17,7 +20,7 @@ class Home extends Component {
 				<h3>Current Username:
 				<input type="text" value={this.props.App.state.username} onChange={this.handleChange} />
 				</h3>
-				<Link to="/test" >Go to product</Link>
+				<RedirectButton location="Test" value="Go To Time Display"/>
 			</div>
 		);
 	}

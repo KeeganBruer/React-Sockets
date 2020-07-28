@@ -16,7 +16,7 @@ class App extends Component {
 		super(props);
 		this.state = {
 			timestamp: 0,
-			username: "default"
+			username: ""
 		};
 	}
 	componentDidMount() {
