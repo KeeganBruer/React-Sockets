@@ -8,7 +8,7 @@ const port = process.env.PORT || 3000;
 
 
 const app = express();
-app.use(express.static(path.join(__dirname, '../Client/build')));
+app.use(express.static('../Client/build'));
 
 const server = http.createServer(app);
 
