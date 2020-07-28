@@ -2,15 +2,13 @@ const express = require("express");
 const router = express.Router();
 const http = require("http");
 const socketIo = require("socket.io");
+const path = require('path');
 
 const port = process.env.PORT || 4000;
 
-let index = router.get("/", (req, res) => {
-  res.send({ response: "I am alive" }).status(200);
-});
 
 const app = express();
-app.use(index);
+app.use(express.static(path.join(__dirname, '../Client/build')));
 
 const server = http.createServer(app);
 
