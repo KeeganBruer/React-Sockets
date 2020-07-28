@@ -4,7 +4,7 @@ const http = require("http");
 const socketIo = require("socket.io");
 const path = require('path');
 
-const port = process.env.PORT || 4000;
+const port = process.env.PORT || 3000;
 
 
 const app = express();
@@ -35,4 +35,5 @@ const getApiAndEmit = socket => {
   socket.emit("FromAPI", response.toLocaleTimeString());
 };
 
-server.listen(port, () => console.log(`Listening on port ${port}`));
+server.listen(4000, () => console.log(`Listening on port ${port}`));
+app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`))
