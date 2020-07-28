@@ -15,7 +15,8 @@ class App extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			timestamp: 0
+			timestamp: 0,
+			username: "default"
 		};
 	}
 	componentDidMount() {
@@ -32,8 +33,8 @@ class App extends Component {
 		return (
 			<Router>
 			  <Switch>
-				<Route exact path="/" ><Home /></Route>
-				<Route path="/Test"><Test timestamp={this.state.timestamp}/></Route>
+				<Route exact path="/" ><Home App={this}/></Route>
+				<Route path="/Test"><Test App={this}/></Route>
 			  </Switch>
 			</Router>
 		);
